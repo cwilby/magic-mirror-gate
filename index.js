@@ -5,6 +5,7 @@ const { json } = require('body-parser');
 const app = express();
 
 app.use(morgan('combined'));
+app.use(json());
 
 app.all('/mirror', (req, res) => {
     const response = {
